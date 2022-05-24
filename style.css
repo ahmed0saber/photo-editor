@@ -7,7 +7,20 @@
     font-family: 'Bitter', serif;
 }
 body{
-    background-color: #f7f7f7;
+    background-color: #F8F0FB;
+}
+button{
+    padding: 8px 24px;
+    background-color: #F8F0FB;
+    border: 2px solid #0002;
+    font-size: 16px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #3083DC;
+    color: #F8F0FB;
+    border: 2px solid #fff2;
 }
 .header{
     padding: 10px;
@@ -25,9 +38,6 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
-}
-.header .btns button{
-    padding: 8px 24px;
 }
 .row{
     display: flex;
@@ -49,17 +59,42 @@ body{
 }
 .side-menu{
     padding: 10px;
-    background-color: #e2e2e2
+    background-color: #3083DC;
 }
 .side-menu .selection{
     margin: 10px;
-    background-color: #f7f7f7;
     padding: 10px;
 }
 .side-menu .selection button{
     width: 100%;
-    padding: 8px 24px;
 }
 #foto-file{
     display: none;
+}
+@media screen and (max-width: 795px) {
+    .side-menu{
+        order: 1;
+    }
+    .image-container{
+        order: 2;
+    }
+    .row{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+@media screen and (max-width: 480px) {
+    .header{
+        flex-direction: column;
+    }
+    .side-menu{
+        padding: 0;
+        order: 2;
+    }
+    .side-menu .selection{
+        padding: 0;
+    }
+    .image-container{
+        order: 1;
+    }
 }
