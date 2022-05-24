@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Editor</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body onresize="setImageContainerSize()">
+    <div class="header">
+        <h1>Photo Editor</h1>
+        <input type="file" class="image-file">
+        <button onclick="saveImage()">Save</button>
+    </div>
+    <div class="row">
+        <div class="left-side side-menu">
+            <div class="selection">
+                <p>blur</p>
+                <input type="range" class="filters" value="0" min="0" max="100" step="5" oninput="changeFilter()" onchange="changeFilter()"/>
+            </div>
+            <div class="selection">
+                <p>brightness</p>
+                <input type="range" class="filters" value="100" min="0" max="100" step="5" oninput="changeFilter()" onchange="changeFilter()"/>
+            </div>
+            <div class="selection">
+                <p>contrast</p>
+                <input type="range" class="filters" value="60" min="0" max="100" step="5" oninput="changeFilter()" onchange="changeFilter()"/>
+            </div>
+            <div class="selection">
+                <p>grayscale</p>
+                <input type="range" class="filters" value="0" min="0" max="100" step="5" oninput="changeFilter()" onchange="changeFilter()"/>
+            </div>
+        </div>
+        <div class="image-container">
+            <img class="image" src="./Ahmed Saber Fathy.jpg">
+        </div>
+        <div class="right-side side-menu">
+            <div class="selection">
+                <p>invert</p>
+                <input type="range" class="filters" value="0" min="0" max="100" step="5" oninput="changeFilter()" onchange="changeFilter()"/>
+            </div>
+            <div class="selection">
+                <p>huerotate</p>
+                <input type="range" class="filters" value="0" min="0" max="100" step="5" oninput="changeFilter()" onchange="changeFilter()"/>
+            </div>
+            <div class="selection">
+                <p>saturate</p>
+                <input type="range" class="filters" value="10" min="0" max="100" step="5" oninput="changeFilter()" onchange="changeFilter()"/>
+            </div>
+            <div class="selection">
+                <p>sepia</p>
+                <input type="range" class="filters" value="0" min="0" max="100" step="5" oninput="changeFilter()" onchange="changeFilter()"/>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+<script src="https://superal.github.io/canvas2image/canvas2image.js"></script>
+<script src="./script.js"></script>
+</html>
